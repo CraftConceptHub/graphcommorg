@@ -1,0 +1,13 @@
+fragment CartStartCheckout on Cart @injectable {
+  prices {
+    grand_total {
+      ...Money
+    }
+  }
+
+  items {
+    errors {
+      message
+    }
+  }
+}

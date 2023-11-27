@@ -1,0 +1,15 @@
+query GetConfigurableOptionsSelection(
+  $urlKey: String!
+  $selectedOptions: [ID!] = []
+  $reviewPageSize: Int = 3
+  $reviewPage: Int = 1
+) {
+  products(filter: { url_key: { eq: $urlKey } }) {
+    __typename
+    items {
+      __typename
+      uid
+      ...ConfigurableOptionsSelection
+    }
+  }
+}

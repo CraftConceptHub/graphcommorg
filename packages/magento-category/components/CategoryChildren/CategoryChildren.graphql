@@ -1,0 +1,10 @@
+fragment CategoryChildren on CategoryTree {
+  uid
+  children {
+    uid
+    name
+    level
+    url_path
+    include_in_menu
+  }
+}

@@ -1,0 +1,10 @@
+fragment PageLink on PageLink @injectable {
+  title
+  url
+  description {
+    raw
+  }
+  asset {
+    ...Asset
+  }
+}

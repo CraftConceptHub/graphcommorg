@@ -1,0 +1,6 @@
+fragment CategoryDescription on CategoryTree @injectable {
+  uid
+  description
+  name
+  display_mode
+}

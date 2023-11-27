@@ -1,0 +1,15 @@
+fragment ProductListItem on ProductInterface @injectable {
+  uid
+  ...ProductLink
+  sku
+  name
+  small_image {
+    ...ProductImage
+  }
+  price_range {
+    minimum_price {
+      ...ProductListPrice
+    }
+  }
+  ...ConfigurableOptions
+}
